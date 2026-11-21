@@ -1,2 +1,7 @@
+node_modules/
+dist/
+.vercel/
 .generated/
-.env.local
+.env
+.env.*
+!.env.example

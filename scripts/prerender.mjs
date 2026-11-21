@@ -2,17 +2,22 @@ import { readFile, writeFile } from 'node:fs/promises'
 import { notFoundMeta, pages, renderPage, siteUrl } from '../.generated/entry-static.js'
 
 const template = await readFile('dist/index.html', 'utf8')
-const configured = siteUrl ? new URL(siteUrl) : null
-if (configured && (!['http:', 'https:'].includes(configured.protocol) || configured.href !== configured.origin + '/')) {
-  throw new Error('VITE_SITE_URL deve conter a origem HTTP(S) do site, sem caminho.')
+const production = process.env.VERCEL_ENV === 'production'
+const preview = process.env.VERCEL_ENV === 'preview'
+const configured = siteUrl ? URL.parse(siteUrl) : null
+if (siteUrl && (!configured || !['http:', 'https:'].includes(configured.protocol) || configured.href !== configured.origin + '/')) {
+  throw new Error('VITE_SITE_URL deve conter uma origem HTTP(S), sem caminho, parâmetros ou fragmento.')
 }
-const origin = configured?.origin
+if (production && configured?.protocol !== 'https:') {
+  throw new Error('Defina VITE_SITE_URL com a origem pública HTTPS no ambiente Production da Vercel.')
+}
+const origin = preview ? undefined : configured?.origin
 const escape = value => value.replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char])
 
 for (const page of [...pages, notFoundMeta]) {
   const notFound = page.path === '/404'
   const address = origin && !notFound ? escape(origin + page.path) : null
-  const metadata = notFound ? '<meta name="robots" content="noindex">' : address
+  const metadata = notFound || preview ? '<meta name="robots" content="noindex">' : address
     ? `<link rel="canonical" href="${address}"><meta property="og:url" content="${address}">`
     : ''
   const html = template
