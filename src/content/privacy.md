@@ -24,11 +24,11 @@ O Reali é uma plataforma desenvolvida para atender instituições de ensino e p
 
 **Informações do responsável pela plataforma:**
 
-- Nome ou razão social:
+- Nome ou razão social: Kayque Silva Pimentel
 - CPF ou CNPJ, conforme aplicável: [Identificação]
 - Endereço de contato: [Endereço institucional]
-- E-mail: [E-mail oficial]
-- Site: [Endereço oficial do Reali]
+- E-mail de contato: [**apoteoserealimenta@gmail.com**](mailto:apoteoserealimenta@gmail.com)
+- Site oficial: [https://reali-omega.vercel.app/](https://reali-omega.vercel.app/)
 - Canal de privacidade: [E-mail para solicitações LGPD]
 
 A identificação dos agentes responsáveis pelo tratamento dependerá da finalidade e das decisões relacionadas a cada operação.
@@ -381,10 +381,10 @@ Para esclarecer dúvidas, exercer direitos ou comunicar questões relacionadas �
 
 **Reali — Gestão Inteligente da Alimentação Escolar**
 
-**Responsável legal:** [Nome ou razão social]
-**E-mail institucional:** [E-mail oficial]
+**Responsável legal:** Kayque Silva Pimentel
+**E-mail de contato:** [**apoteoserealimenta@gmail.com**](mailto:apoteoserealimenta@gmail.com)
 **Canal de privacidade:** [E-mail de privacidade]
-**Site:** [Endereço oficial]
+**Site oficial:** [https://reali-omega.vercel.app/](https://reali-omega.vercel.app/)
 
 O responsável pelo tratamento avaliará as solicitações e prestará as informações cabíveis, respeitando as responsabilidades estabelecidas pela legislação.
 
