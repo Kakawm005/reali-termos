@@ -25,8 +25,6 @@ O Reali é uma plataforma desenvolvida para atender instituições de ensino e p
 **Informações do responsável pela plataforma:**
 
 - Nome ou razão social: Kayque Silva Pimentel
-- CPF ou CNPJ, conforme aplicável: [Identificação]
-- Endereço de contato: [Endereço institucional]
 - E-mail de contato: [**apoteoserealimenta@gmail.com**](mailto:apoteoserealimenta@gmail.com)
 - Site oficial: [https://reali-omega.vercel.app/](https://reali-omega.vercel.app/)
 
