@@ -266,10 +266,11 @@ function RouteEffects() {
       ['meta[property="og:title"]', page.title],
       ['meta[property="og:description"]', page.description],
     ]) document.querySelector(selector)?.setAttribute('content', value)
-    const origin = import.meta.env.VITE_SITE_URL?.trim().replace(/\/+$/, '')
-    if (origin) {
-      document.querySelector('link[rel="canonical"]')?.setAttribute('href', origin + page.path)
-      document.querySelector('meta[property="og:url"]')?.setAttribute('content', origin + page.path)
+    const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')
+    if (canonical) {
+      const address = new URL(page.path, canonical.href).href
+      canonical.href = address
+      document.querySelector('meta[property="og:url"]')?.setAttribute('content', address)
     }
     if (!hash) {
       if (previousPath.current !== pathname) document.getElementById('conteudo')?.focus({ preventScroll: true })

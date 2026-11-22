@@ -10,7 +10,7 @@ Na raiz do repositório, use Node.js 24 e execute `npm ci` e `npm run dev`. Para
 
 Ao importar o repositório na Vercel, mantenha o **Root Directory** na raiz (`.`). O `vercel.json` seleciona o preset Vite, instala dependências com `npm ci`, executa `npm run build` e publica `dist` com URLs sem extensão.
 
-Em **Settings → Environment Variables**, mantenha **Automatically expose System Environment Variables** habilitado para que o build receba `VERCEL_ENV`. Defina `VITE_SITE_URL` para **Production** com a origem HTTPS do domínio público escolhido (por exemplo, `https://termos.example.com`). O build de produção exige essa variável e a usa para gerar as URLs canônicas, as URLs Open Graph e as entradas do sitemap. Builds Preview incluem `noindex`.
+Em **Settings → Environment Variables**, mantenha o acesso às variáveis de sistema habilitado. O build de produção usa o domínio fornecido pela Vercel em `VERCEL_PROJECT_PRODUCTION_URL` para gerar as URLs canônicas, as URLs Open Graph e as entradas do sitemap. Para escolher outro domínio canônico, defina `VITE_SITE_URL` em **Production** com a origem HTTPS desejada (por exemplo, `https://termos.example.com`). Builds Preview incluem `noindex`.
 
 No deploy, confira `/`, `/termos-de-uso`, `/politica-de-privacidade`, `/robots.txt` e `/sitemap.xml`. Uma rota desconhecida deve retornar HTTP 404.
 

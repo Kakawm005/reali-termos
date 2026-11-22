@@ -4,12 +4,14 @@ import { notFoundMeta, pages, renderPage, siteUrl } from '../.generated/entry-st
 const template = await readFile('dist/index.html', 'utf8')
 const production = process.env.VERCEL_ENV === 'production'
 const preview = process.env.VERCEL_ENV === 'preview'
-const configured = siteUrl ? URL.parse(siteUrl) : null
-if (siteUrl && (!configured || !['http:', 'https:'].includes(configured.protocol) || configured.href !== configured.origin + '/')) {
-  throw new Error('VITE_SITE_URL deve conter uma origem HTTP(S), sem caminho, parâmetros ou fragmento.')
+const productionDomain = production ? process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim() : undefined
+const siteAddress = siteUrl || (productionDomain ? `https://${productionDomain}` : undefined)
+const configured = siteAddress ? URL.parse(siteAddress) : null
+if (siteAddress && (!configured || !['http:', 'https:'].includes(configured.protocol) || configured.href !== configured.origin + '/')) {
+  throw new Error('A URL do site deve conter apenas a origem HTTP(S), sem caminho, parâmetros ou fragmento.')
 }
 if (production && configured?.protocol !== 'https:') {
-  throw new Error('Defina VITE_SITE_URL com a origem pública HTTPS no ambiente Production da Vercel.')
+  throw new Error('Defina VITE_SITE_URL com a origem HTTPS ou habilite VERCEL_PROJECT_PRODUCTION_URL nas variáveis de sistema da Vercel.')
 }
 const origin = preview ? undefined : configured?.origin
 const escape = value => value.replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char])
