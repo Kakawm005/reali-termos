@@ -29,7 +29,6 @@ O Reali é uma plataforma desenvolvida para atender instituições de ensino e p
 - Endereço de contato: [Endereço institucional]
 - E-mail de contato: [**apoteoserealimenta@gmail.com**](mailto:apoteoserealimenta@gmail.com)
 - Site oficial: [https://reali-omega.vercel.app/](https://reali-omega.vercel.app/)
-- Canal de privacidade: [E-mail para solicitações LGPD]
 
 A identificação dos agentes responsáveis pelo tratamento dependerá da finalidade e das decisões relacionadas a cada operação.
 
@@ -325,7 +324,7 @@ O exercício desses direitos será gratuito, observados os requisitos legais.
 
 ### Como exercer os direitos
 
-As solicitações poderão ser encaminhadas ao canal de privacidade indicado nesta Política.
+As solicitações poderão ser encaminhadas ao e-mail de contato indicado na seção 18 desta Política.
 
 Quando o Reali atuar exclusivamente como operador, a solicitação poderá ser encaminhada ao controlador responsável, com o apoio técnico do Reali quando cabível.
 
@@ -383,7 +382,6 @@ Para esclarecer dúvidas, exercer direitos ou comunicar questões relacionadas �
 
 **Responsável legal:** Kayque Silva Pimentel
 **E-mail de contato:** [**apoteoserealimenta@gmail.com**](mailto:apoteoserealimenta@gmail.com)
-**Canal de privacidade:** [E-mail de privacidade]
 **Site oficial:** [https://reali-omega.vercel.app/](https://reali-omega.vercel.app/)
 
 O responsável pelo tratamento avaliará as solicitações e prestará as informações cabíveis, respeitando as responsabilidades estabelecidas pela legislação.
